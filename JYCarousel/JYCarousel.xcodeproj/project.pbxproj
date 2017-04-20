@@ -1,0 +1,661 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D77481211EA84CA800AFF588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77481201EA84CA800AFF588 /* AppDelegate.swift */; };
+		D77481231EA84CA800AFF588 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77481221EA84CA800AFF588 /* ViewController.swift */; };
+		D77481261EA84CA800AFF588 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77481241EA84CA800AFF588 /* Main.storyboard */; };
+		D77481281EA84CA800AFF588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D77481271EA84CA800AFF588 /* Assets.xcassets */; };
+		D774812B1EA84CA800AFF588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77481291EA84CA800AFF588 /* LaunchScreen.storyboard */; };
+		D77481361EA84CA800AFF588 /* JYCarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77481351EA84CA800AFF588 /* JYCarouselTests.swift */; };
+		D77481411EA84CA800AFF588 /* JYCarouselUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77481401EA84CA800AFF588 /* JYCarouselUITests.swift */; };
+		D77481A81EA84D1C00AFF588 /* JYCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77481861EA84D1C00AFF588 /* JYCarouselView.swift */; };
+		D77481A91EA84D1C00AFF588 /* JYCarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D77481871EA84D1C00AFF588 /* JYCarouselView.xib */; };
+		D77481AA1EA84D1C00AFF588 /* JYCarouselViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77481881EA84D1C00AFF588 /* JYCarouselViewCell.swift */; };
+		D77481AB1EA84D1C00AFF588 /* JYCarouselViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D77481891EA84D1C00AFF588 /* JYCarouselViewCell.xib */; };
+		D77481AC1EA84D1C00AFF588 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = D774818C1EA84D1C00AFF588 /* NSData+ImageContentType.m */; };
+		D77481AD1EA84D1C00AFF588 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D774818E1EA84D1C00AFF588 /* SDImageCache.m */; };
+		D77481AE1EA84D1C00AFF588 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = D77481901EA84D1C00AFF588 /* SDWebImageCompat.m */; };
+		D77481AF1EA84D1C00AFF588 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = D77481921EA84D1C00AFF588 /* SDWebImageDecoder.m */; };
+		D77481B01EA84D1C00AFF588 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D77481941EA84D1C00AFF588 /* SDWebImageDownloader.m */; };
+		D77481B11EA84D1C00AFF588 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D77481961EA84D1C00AFF588 /* SDWebImageDownloaderOperation.m */; };
+		D77481B21EA84D1C00AFF588 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D77481981EA84D1C00AFF588 /* SDWebImageManager.m */; };
+		D77481B31EA84D1C00AFF588 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D774819B1EA84D1C00AFF588 /* SDWebImagePrefetcher.m */; };
+		D77481B41EA84D1C00AFF588 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D774819D1EA84D1C00AFF588 /* UIButton+WebCache.m */; };
+		D77481B51EA84D1C00AFF588 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = D774819F1EA84D1C00AFF588 /* UIImage+GIF.m */; };
+		D77481B61EA84D1C00AFF588 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = D77481A11EA84D1C00AFF588 /* UIImage+MultiFormat.m */; };
+		D77481B71EA84D1C00AFF588 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D77481A31EA84D1C00AFF588 /* UIImageView+HighlightedWebCache.m */; };
+		D77481B81EA84D1C00AFF588 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D77481A51EA84D1C00AFF588 /* UIImageView+WebCache.m */; };
+		D77481B91EA84D1C00AFF588 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D77481A71EA84D1C00AFF588 /* UIView+WebCacheOperation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D77481321EA84CA800AFF588 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D77481151EA84CA800AFF588 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D774811C1EA84CA800AFF588;
+			remoteInfo = JYCarousel;
+		};
+		D774813D1EA84CA800AFF588 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D77481151EA84CA800AFF588 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D774811C1EA84CA800AFF588;
+			remoteInfo = JYCarousel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D774811D1EA84CA800AFF588 /* JYCarousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYCarousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D77481201EA84CA800AFF588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D77481221EA84CA800AFF588 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D77481251EA84CA800AFF588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D77481271EA84CA800AFF588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D774812A1EA84CA800AFF588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D774812C1EA84CA800AFF588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D77481311EA84CA800AFF588 /* JYCarouselTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JYCarouselTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D77481351EA84CA800AFF588 /* JYCarouselTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYCarouselTests.swift; sourceTree = "<group>"; };
+		D77481371EA84CA800AFF588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D774813C1EA84CA800AFF588 /* JYCarouselUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JYCarouselUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D77481401EA84CA800AFF588 /* JYCarouselUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYCarouselUITests.swift; sourceTree = "<group>"; };
+		D77481421EA84CA800AFF588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D77481841EA84D1C00AFF588 /* JYCarousel-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JYCarousel-Bridging-Header.h"; sourceTree = "<group>"; };
+		D77481861EA84D1C00AFF588 /* JYCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYCarouselView.swift; sourceTree = "<group>"; };
+		D77481871EA84D1C00AFF588 /* JYCarouselView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYCarouselView.xib; sourceTree = "<group>"; };
+		D77481881EA84D1C00AFF588 /* JYCarouselViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYCarouselViewCell.swift; sourceTree = "<group>"; };
+		D77481891EA84D1C00AFF588 /* JYCarouselViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYCarouselViewCell.xib; sourceTree = "<group>"; };
+		D774818B1EA84D1C00AFF588 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		D774818C1EA84D1C00AFF588 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		D774818D1EA84D1C00AFF588 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
+		D774818E1EA84D1C00AFF588 /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
+		D774818F1EA84D1C00AFF588 /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
+		D77481901EA84D1C00AFF588 /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCompat.m; sourceTree = "<group>"; };
+		D77481911EA84D1C00AFF588 /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
+		D77481921EA84D1C00AFF588 /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		D77481931EA84D1C00AFF588 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
+		D77481941EA84D1C00AFF588 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
+		D77481951EA84D1C00AFF588 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		D77481961EA84D1C00AFF588 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		D77481971EA84D1C00AFF588 /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
+		D77481981EA84D1C00AFF588 /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
+		D77481991EA84D1C00AFF588 /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
+		D774819A1EA84D1C00AFF588 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		D774819B1EA84D1C00AFF588 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		D774819C1EA84D1C00AFF588 /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
+		D774819D1EA84D1C00AFF588 /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
+		D774819E1EA84D1C00AFF588 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		D774819F1EA84D1C00AFF588 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		D77481A01EA84D1C00AFF588 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		D77481A11EA84D1C00AFF588 /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		D77481A21EA84D1C00AFF588 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
+		D77481A31EA84D1C00AFF588 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
+		D77481A41EA84D1C00AFF588 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		D77481A51EA84D1C00AFF588 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		D77481A61EA84D1C00AFF588 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
+		D77481A71EA84D1C00AFF588 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D774811A1EA84CA800AFF588 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D774812E1EA84CA800AFF588 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D77481391EA84CA800AFF588 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D77481141EA84CA800AFF588 = {
+			isa = PBXGroup;
+			children = (
+				D774811F1EA84CA800AFF588 /* JYCarousel */,
+				D77481341EA84CA800AFF588 /* JYCarouselTests */,
+				D774813F1EA84CA800AFF588 /* JYCarouselUITests */,
+				D774811E1EA84CA800AFF588 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D774811E1EA84CA800AFF588 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D774811D1EA84CA800AFF588 /* JYCarousel.app */,
+				D77481311EA84CA800AFF588 /* JYCarouselTests.xctest */,
+				D774813C1EA84CA800AFF588 /* JYCarouselUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D774811F1EA84CA800AFF588 /* JYCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				D77481851EA84D1C00AFF588 /* JYCarouselView */,
+				D774818A1EA84D1C00AFF588 /* SDWebImage */,
+				D77481201EA84CA800AFF588 /* AppDelegate.swift */,
+				D77481221EA84CA800AFF588 /* ViewController.swift */,
+				D77481241EA84CA800AFF588 /* Main.storyboard */,
+				D77481271EA84CA800AFF588 /* Assets.xcassets */,
+				D77481291EA84CA800AFF588 /* LaunchScreen.storyboard */,
+				D774812C1EA84CA800AFF588 /* Info.plist */,
+				D77481841EA84D1C00AFF588 /* JYCarousel-Bridging-Header.h */,
+			);
+			path = JYCarousel;
+			sourceTree = "<group>";
+		};
+		D77481341EA84CA800AFF588 /* JYCarouselTests */ = {
+			isa = PBXGroup;
+			children = (
+				D77481351EA84CA800AFF588 /* JYCarouselTests.swift */,
+				D77481371EA84CA800AFF588 /* Info.plist */,
+			);
+			path = JYCarouselTests;
+			sourceTree = "<group>";
+		};
+		D774813F1EA84CA800AFF588 /* JYCarouselUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D77481401EA84CA800AFF588 /* JYCarouselUITests.swift */,
+				D77481421EA84CA800AFF588 /* Info.plist */,
+			);
+			path = JYCarouselUITests;
+			sourceTree = "<group>";
+		};
+		D77481851EA84D1C00AFF588 /* JYCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				D77481861EA84D1C00AFF588 /* JYCarouselView.swift */,
+				D77481871EA84D1C00AFF588 /* JYCarouselView.xib */,
+				D77481881EA84D1C00AFF588 /* JYCarouselViewCell.swift */,
+				D77481891EA84D1C00AFF588 /* JYCarouselViewCell.xib */,
+			);
+			path = JYCarouselView;
+			sourceTree = "<group>";
+		};
+		D774818A1EA84D1C00AFF588 /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				D774818B1EA84D1C00AFF588 /* NSData+ImageContentType.h */,
+				D774818C1EA84D1C00AFF588 /* NSData+ImageContentType.m */,
+				D774818D1EA84D1C00AFF588 /* SDImageCache.h */,
+				D774818E1EA84D1C00AFF588 /* SDImageCache.m */,
+				D774818F1EA84D1C00AFF588 /* SDWebImageCompat.h */,
+				D77481901EA84D1C00AFF588 /* SDWebImageCompat.m */,
+				D77481911EA84D1C00AFF588 /* SDWebImageDecoder.h */,
+				D77481921EA84D1C00AFF588 /* SDWebImageDecoder.m */,
+				D77481931EA84D1C00AFF588 /* SDWebImageDownloader.h */,
+				D77481941EA84D1C00AFF588 /* SDWebImageDownloader.m */,
+				D77481951EA84D1C00AFF588 /* SDWebImageDownloaderOperation.h */,
+				D77481961EA84D1C00AFF588 /* SDWebImageDownloaderOperation.m */,
+				D77481971EA84D1C00AFF588 /* SDWebImageManager.h */,
+				D77481981EA84D1C00AFF588 /* SDWebImageManager.m */,
+				D77481991EA84D1C00AFF588 /* SDWebImageOperation.h */,
+				D774819A1EA84D1C00AFF588 /* SDWebImagePrefetcher.h */,
+				D774819B1EA84D1C00AFF588 /* SDWebImagePrefetcher.m */,
+				D774819C1EA84D1C00AFF588 /* UIButton+WebCache.h */,
+				D774819D1EA84D1C00AFF588 /* UIButton+WebCache.m */,
+				D774819E1EA84D1C00AFF588 /* UIImage+GIF.h */,
+				D774819F1EA84D1C00AFF588 /* UIImage+GIF.m */,
+				D77481A01EA84D1C00AFF588 /* UIImage+MultiFormat.h */,
+				D77481A11EA84D1C00AFF588 /* UIImage+MultiFormat.m */,
+				D77481A21EA84D1C00AFF588 /* UIImageView+HighlightedWebCache.h */,
+				D77481A31EA84D1C00AFF588 /* UIImageView+HighlightedWebCache.m */,
+				D77481A41EA84D1C00AFF588 /* UIImageView+WebCache.h */,
+				D77481A51EA84D1C00AFF588 /* UIImageView+WebCache.m */,
+				D77481A61EA84D1C00AFF588 /* UIView+WebCacheOperation.h */,
+				D77481A71EA84D1C00AFF588 /* UIView+WebCacheOperation.m */,
+			);
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D774811C1EA84CA800AFF588 /* JYCarousel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D77481451EA84CA800AFF588 /* Build configuration list for PBXNativeTarget "JYCarousel" */;
+			buildPhases = (
+				D77481191EA84CA800AFF588 /* Sources */,
+				D774811A1EA84CA800AFF588 /* Frameworks */,
+				D774811B1EA84CA800AFF588 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JYCarousel;
+			productName = JYCarousel;
+			productReference = D774811D1EA84CA800AFF588 /* JYCarousel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D77481301EA84CA800AFF588 /* JYCarouselTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D77481481EA84CA800AFF588 /* Build configuration list for PBXNativeTarget "JYCarouselTests" */;
+			buildPhases = (
+				D774812D1EA84CA800AFF588 /* Sources */,
+				D774812E1EA84CA800AFF588 /* Frameworks */,
+				D774812F1EA84CA800AFF588 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D77481331EA84CA800AFF588 /* PBXTargetDependency */,
+			);
+			name = JYCarouselTests;
+			productName = JYCarouselTests;
+			productReference = D77481311EA84CA800AFF588 /* JYCarouselTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D774813B1EA84CA800AFF588 /* JYCarouselUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D774814B1EA84CA800AFF588 /* Build configuration list for PBXNativeTarget "JYCarouselUITests" */;
+			buildPhases = (
+				D77481381EA84CA800AFF588 /* Sources */,
+				D77481391EA84CA800AFF588 /* Frameworks */,
+				D774813A1EA84CA800AFF588 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D774813E1EA84CA800AFF588 /* PBXTargetDependency */,
+			);
+			name = JYCarouselUITests;
+			productName = JYCarouselUITests;
+			productReference = D774813C1EA84CA800AFF588 /* JYCarouselUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D77481151EA84CA800AFF588 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "靳志远";
+				TargetAttributes = {
+					D774811C1EA84CA800AFF588 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = Y2S2575EP7;
+						ProvisioningStyle = Automatic;
+					};
+					D77481301EA84CA800AFF588 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = Y2S2575EP7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D774811C1EA84CA800AFF588;
+					};
+					D774813B1EA84CA800AFF588 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = Y2S2575EP7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D774811C1EA84CA800AFF588;
+					};
+				};
+			};
+			buildConfigurationList = D77481181EA84CA800AFF588 /* Build configuration list for PBXProject "JYCarousel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D77481141EA84CA800AFF588;
+			productRefGroup = D774811E1EA84CA800AFF588 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D774811C1EA84CA800AFF588 /* JYCarousel */,
+				D77481301EA84CA800AFF588 /* JYCarouselTests */,
+				D774813B1EA84CA800AFF588 /* JYCarouselUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D774811B1EA84CA800AFF588 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D774812B1EA84CA800AFF588 /* LaunchScreen.storyboard in Resources */,
+				D77481281EA84CA800AFF588 /* Assets.xcassets in Resources */,
+				D77481AB1EA84D1C00AFF588 /* JYCarouselViewCell.xib in Resources */,
+				D77481261EA84CA800AFF588 /* Main.storyboard in Resources */,
+				D77481A91EA84D1C00AFF588 /* JYCarouselView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D774812F1EA84CA800AFF588 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D774813A1EA84CA800AFF588 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D77481191EA84CA800AFF588 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D77481AC1EA84D1C00AFF588 /* NSData+ImageContentType.m in Sources */,
+				D77481B21EA84D1C00AFF588 /* SDWebImageManager.m in Sources */,
+				D77481B71EA84D1C00AFF588 /* UIImageView+HighlightedWebCache.m in Sources */,
+				D77481B01EA84D1C00AFF588 /* SDWebImageDownloader.m in Sources */,
+				D77481B81EA84D1C00AFF588 /* UIImageView+WebCache.m in Sources */,
+				D77481AD1EA84D1C00AFF588 /* SDImageCache.m in Sources */,
+				D77481A81EA84D1C00AFF588 /* JYCarouselView.swift in Sources */,
+				D77481231EA84CA800AFF588 /* ViewController.swift in Sources */,
+				D77481AF1EA84D1C00AFF588 /* SDWebImageDecoder.m in Sources */,
+				D77481B61EA84D1C00AFF588 /* UIImage+MultiFormat.m in Sources */,
+				D77481B11EA84D1C00AFF588 /* SDWebImageDownloaderOperation.m in Sources */,
+				D77481211EA84CA800AFF588 /* AppDelegate.swift in Sources */,
+				D77481B41EA84D1C00AFF588 /* UIButton+WebCache.m in Sources */,
+				D77481B31EA84D1C00AFF588 /* SDWebImagePrefetcher.m in Sources */,
+				D77481AE1EA84D1C00AFF588 /* SDWebImageCompat.m in Sources */,
+				D77481B51EA84D1C00AFF588 /* UIImage+GIF.m in Sources */,
+				D77481B91EA84D1C00AFF588 /* UIView+WebCacheOperation.m in Sources */,
+				D77481AA1EA84D1C00AFF588 /* JYCarouselViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D774812D1EA84CA800AFF588 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D77481361EA84CA800AFF588 /* JYCarouselTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D77481381EA84CA800AFF588 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D77481411EA84CA800AFF588 /* JYCarouselUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D77481331EA84CA800AFF588 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D774811C1EA84CA800AFF588 /* JYCarousel */;
+			targetProxy = D77481321EA84CA800AFF588 /* PBXContainerItemProxy */;
+		};
+		D774813E1EA84CA800AFF588 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D774811C1EA84CA800AFF588 /* JYCarousel */;
+			targetProxy = D774813D1EA84CA800AFF588 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D77481241EA84CA800AFF588 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D77481251EA84CA800AFF588 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D77481291EA84CA800AFF588 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D774812A1EA84CA800AFF588 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D77481431EA84CA800AFF588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D77481441EA84CA800AFF588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D77481461EA84CA800AFF588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y2S2575EP7;
+				INFOPLIST_FILE = JYCarousel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-2345.JYCarousel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JYCarousel/JYCarousel-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D77481471EA84CA800AFF588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y2S2575EP7;
+				INFOPLIST_FILE = JYCarousel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-2345.JYCarousel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JYCarousel/JYCarousel-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D77481491EA84CA800AFF588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y2S2575EP7;
+				INFOPLIST_FILE = JYCarouselTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-2345.JYCarouselTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JYCarousel.app/JYCarousel";
+			};
+			name = Debug;
+		};
+		D774814A1EA84CA800AFF588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y2S2575EP7;
+				INFOPLIST_FILE = JYCarouselTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-2345.JYCarouselTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JYCarousel.app/JYCarousel";
+			};
+			name = Release;
+		};
+		D774814C1EA84CA800AFF588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = Y2S2575EP7;
+				INFOPLIST_FILE = JYCarouselUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-2345.JYCarouselUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = JYCarousel;
+			};
+			name = Debug;
+		};
+		D774814D1EA84CA800AFF588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = Y2S2575EP7;
+				INFOPLIST_FILE = JYCarouselUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-2345.JYCarouselUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = JYCarousel;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D77481181EA84CA800AFF588 /* Build configuration list for PBXProject "JYCarousel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D77481431EA84CA800AFF588 /* Debug */,
+				D77481441EA84CA800AFF588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D77481451EA84CA800AFF588 /* Build configuration list for PBXNativeTarget "JYCarousel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D77481461EA84CA800AFF588 /* Debug */,
+				D77481471EA84CA800AFF588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D77481481EA84CA800AFF588 /* Build configuration list for PBXNativeTarget "JYCarouselTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D77481491EA84CA800AFF588 /* Debug */,
+				D774814A1EA84CA800AFF588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D774814B1EA84CA800AFF588 /* Build configuration list for PBXNativeTarget "JYCarouselUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D774814C1EA84CA800AFF588 /* Debug */,
+				D774814D1EA84CA800AFF588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D77481151EA84CA800AFF588 /* Project object */;
+}
