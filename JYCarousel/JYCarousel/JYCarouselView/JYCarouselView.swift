@@ -125,6 +125,12 @@ extension JYCarouselView: UIScrollViewDelegate {
         destroyTimer()
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let index = Int(myCollectionView.contentOffset.x / myCollectionView.bounds.width + 0.5)
+        // myPageView索引
+        myPageView.currentPage = index % pictureDataSource.count
+    }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         // 当前cell索引(第几个单元格)
         indexPathRow = Int(myCollectionView.contentOffset.x / myCollectionView.bounds.width)
@@ -138,9 +144,6 @@ extension JYCarouselView: UIScrollViewDelegate {
             myCollectionView.scrollToItem(at: IndexPath(item: indexPathRow, section: 0), at: UICollectionViewScrollPosition.centeredHorizontally, animated: false)
         }
         
-        // myPageView索引
-        myPageView.currentPage = indexPathRow % pictureDataSource.count
-        
         // 开启计时器
         startTimer()
     }
@@ -153,7 +156,7 @@ extension JYCarouselView {
     fileprivate func startTimer() {
         destroyTimer()
         
-        myTimer = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(startScroll), userInfo: nil, repeats: true)
+        myTimer = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(automaticScroll), userInfo: nil, repeats: true)
     }
     
     /// 销毁计时器
@@ -164,8 +167,8 @@ extension JYCarouselView {
         }
     }
     
-    /// 计时器调用方法：开始滚动
-    @objc fileprivate func startScroll() {
+    /// 计时器调用方法：自动滚动
+    @objc fileprivate func automaticScroll() {
         myCollectionView.scrollToItem(at: IndexPath(item: indexPathRow + 1, section: 0), at: UICollectionViewScrollPosition.centeredHorizontally, animated: true)
         scrollViewDidEndDecelerating(myCollectionView)
     }

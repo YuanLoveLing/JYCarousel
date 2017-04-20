@@ -67,7 +67,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gb9-zn-qxu">
             <objects>
-                <navigationController id="xTI-sc-d9a" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xTI-sc-d9a" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Jj-0H-ZId">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
