@@ -32,6 +32,8 @@
 		D77481B71EA84D1C00AFF588 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D77481A31EA84D1C00AFF588 /* UIImageView+HighlightedWebCache.m */; };
 		D77481B81EA84D1C00AFF588 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D77481A51EA84D1C00AFF588 /* UIImageView+WebCache.m */; };
 		D77481B91EA84D1C00AFF588 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D77481A71EA84D1C00AFF588 /* UIView+WebCacheOperation.m */; };
+		D77481BB1EA8577400AFF588 /* localCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77481BA1EA8577400AFF588 /* localCarouselViewController.swift */; };
+		D77481BD1EA8578B00AFF588 /* onlineCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77481BC1EA8578B00AFF588 /* onlineCarouselViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		D77481A51EA84D1C00AFF588 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		D77481A61EA84D1C00AFF588 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		D77481A71EA84D1C00AFF588 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		D77481BA1EA8577400AFF588 /* localCarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = localCarouselViewController.swift; sourceTree = "<group>"; };
+		D77481BC1EA8578B00AFF588 /* onlineCarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onlineCarouselViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 				D77481201EA84CA800AFF588 /* AppDelegate.swift */,
 				D77481221EA84CA800AFF588 /* ViewController.swift */,
 				D77481241EA84CA800AFF588 /* Main.storyboard */,
+				D77481BA1EA8577400AFF588 /* localCarouselViewController.swift */,
+				D77481BC1EA8578B00AFF588 /* onlineCarouselViewController.swift */,
 				D77481271EA84CA800AFF588 /* Assets.xcassets */,
 				D77481291EA84CA800AFF588 /* LaunchScreen.storyboard */,
 				D774812C1EA84CA800AFF588 /* Info.plist */,
@@ -376,10 +382,12 @@
 				D77481231EA84CA800AFF588 /* ViewController.swift in Sources */,
 				D77481AF1EA84D1C00AFF588 /* SDWebImageDecoder.m in Sources */,
 				D77481B61EA84D1C00AFF588 /* UIImage+MultiFormat.m in Sources */,
+				D77481BB1EA8577400AFF588 /* localCarouselViewController.swift in Sources */,
 				D77481B11EA84D1C00AFF588 /* SDWebImageDownloaderOperation.m in Sources */,
 				D77481211EA84CA800AFF588 /* AppDelegate.swift in Sources */,
 				D77481B41EA84D1C00AFF588 /* UIButton+WebCache.m in Sources */,
 				D77481B31EA84D1C00AFF588 /* SDWebImagePrefetcher.m in Sources */,
+				D77481BD1EA8578B00AFF588 /* onlineCarouselViewController.swift in Sources */,
 				D77481AE1EA84D1C00AFF588 /* SDWebImageCompat.m in Sources */,
 				D77481B51EA84D1C00AFF588 /* UIImage+GIF.m in Sources */,
 				D77481B91EA84D1C00AFF588 /* UIView+WebCacheOperation.m in Sources */,
@@ -539,6 +547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y2S2575EP7;
 				INFOPLIST_FILE = JYCarousel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-2345.JYCarousel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -553,6 +562,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y2S2575EP7;
 				INFOPLIST_FILE = JYCarousel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-2345.JYCarousel";
 				PRODUCT_NAME = "$(TARGET_NAME)";

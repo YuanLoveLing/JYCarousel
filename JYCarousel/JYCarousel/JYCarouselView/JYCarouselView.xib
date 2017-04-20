@@ -11,43 +11,42 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JYCarouselView" customModule="CarouselDemo" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JYCarouselView" customModule="JYCarousel" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5aW-1u-HtR">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="TRC-uD-64Z">
                     <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7kh-tm-yi4">
+                    <color key="backgroundColor" red="1" green="0.45098039220000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IEl-44-rZh">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ipr-hd-jbd">
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="dQK-FP-G44">
                     <rect key="frame" x="5" y="113" width="290" height="37"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </pageControl>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="ipr-hd-jbd" secondAttribute="bottom" id="0AR-3P-hBn"/>
-                <constraint firstAttribute="bottom" secondItem="5aW-1u-HtR" secondAttribute="bottom" id="Oao-4j-wn2"/>
-                <constraint firstItem="ipr-hd-jbd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="RXw-7a-kJ5"/>
-                <constraint firstItem="5aW-1u-HtR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZxR-4l-tGq"/>
-                <constraint firstItem="5aW-1u-HtR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kGm-Ac-7La"/>
-                <constraint firstAttribute="trailing" secondItem="ipr-hd-jbd" secondAttribute="trailing" constant="5" id="lSh-67-b13"/>
-                <constraint firstAttribute="trailing" secondItem="5aW-1u-HtR" secondAttribute="trailing" id="n2n-z7-2vb"/>
+                <constraint firstAttribute="trailing" secondItem="dQK-FP-G44" secondAttribute="trailing" constant="5" id="4pb-1f-AbL"/>
+                <constraint firstItem="dQK-FP-G44" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="5rZ-c0-Kp9"/>
+                <constraint firstItem="TRC-uD-64Z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="F9g-TR-AR1"/>
+                <constraint firstAttribute="bottom" secondItem="dQK-FP-G44" secondAttribute="bottom" id="H0N-Wt-MTm"/>
+                <constraint firstItem="TRC-uD-64Z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="env-iS-Zh0"/>
+                <constraint firstAttribute="trailing" secondItem="TRC-uD-64Z" secondAttribute="trailing" id="hvb-sI-O5M"/>
+                <constraint firstAttribute="bottom" secondItem="TRC-uD-64Z" secondAttribute="bottom" id="kXU-D6-dH4"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="myCollectionView" destination="5aW-1u-HtR" id="tHz-D7-sDI"/>
-                <outlet property="myCollectionViewFlowLayout" destination="7kh-tm-yi4" id="27T-Dq-RFn"/>
-                <outlet property="myPageView" destination="ipr-hd-jbd" id="9Ql-wD-jwZ"/>
+                <outlet property="myCollectionView" destination="TRC-uD-64Z" id="Dbx-s2-MZI"/>
+                <outlet property="myCollectionViewFlowLayout" destination="IEl-44-rZh" id="Gls-9B-QTa"/>
+                <outlet property="myPageView" destination="dQK-FP-G44" id="tWg-gh-b6T"/>
             </connections>
-            <point key="canvasLocation" x="-305" y="67"/>
+            <point key="canvasLocation" x="-701" y="68"/>
         </view>
     </objects>
 </document>

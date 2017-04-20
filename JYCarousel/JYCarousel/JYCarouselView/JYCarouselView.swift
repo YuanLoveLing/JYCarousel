@@ -10,13 +10,7 @@ import UIKit
 
 fileprivate let JYCarouselViewCellId = "JYCarouselViewCellId"
 
-fileprivate let JYId = "JYId"
-
-
-
 class JYCarouselView: UIView {
-    
-    
     
     @IBOutlet fileprivate weak var myCollectionView: UICollectionView!
     @IBOutlet fileprivate weak var myCollectionViewFlowLayout: UICollectionViewFlowLayout!
@@ -24,14 +18,15 @@ class JYCarouselView: UIView {
     /// myPageView(对外开放，以方便根据需求修改myPageView样式)
     @IBOutlet weak var myPageView: UIPageControl!
     
-    /// 图片数据源
-    fileprivate var pictureDataSource: [String] = []
-    
     /// 点击单元格回调
     fileprivate var clickCellClosure: ((_ index: Int) -> ())?
-    
-    /// 记录myCollectionView当前indexPathRow
+    /// 图片数据源
+    fileprivate var pictureDataSource: [String] = []
+    /// 记录myCollectionView当前cell的indexPathRow
     fileprivate var indexPathRow: Int = 0
+    
+    /// 计时器
+    fileprivate weak var myTimer: Timer?
     
     /**
      实例化对象类方法
@@ -42,6 +37,11 @@ class JYCarouselView: UIView {
         let view = Bundle.main.loadNibNamed("JYCarouselView", owner: nil, options: nil)?.first as! JYCarouselView
         
         view.pictureDataSource = pictureDataSource
+        if pictureDataSource.count > 1 {
+            // 开始滚动
+            view.startTimer()
+        }
+        
         view.clickCellClosure = clickCellClosure
         
         view.myPageView.numberOfPages = pictureDataSource.count
@@ -61,13 +61,28 @@ class JYCarouselView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        myCollectionViewFlowLayout.itemSize = myCollectionView.bounds.size
+        myCollectionViewFlowLayout.itemSize = myCollectionView.frame.size
         myCollectionViewFlowLayout.minimumLineSpacing = 0.0
         myCollectionViewFlowLayout.minimumInteritemSpacing = 0.0
         
         // 解决屏幕旋转后分页问题
         let offsetX = myCollectionView.bounds.width * CGFloat(indexPathRow)
         myCollectionView.contentOffset = CGPoint(x: offsetX, y: 0)
+    }
+    
+    override func removeFromSuperview() {
+        super.removeFromSuperview()
+        
+        /// 销毁计时器
+        destroyTimer()
+    }
+    
+    
+    deinit {
+        // 解决当timer释放后 回调scrollViewDidScroll时访问野指针导致崩溃
+        myCollectionView.delegate = nil
+        myCollectionView.dataSource = nil
+        print("\(#file)88")
     }
 }
 
@@ -105,6 +120,10 @@ extension JYCarouselView: UICollectionViewDelegate {
 
 // MARK: - UIScrollViewDelegate
 extension JYCarouselView: UIScrollViewDelegate {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        destroyTimer()
+    }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         // 当前cell索引(第几个单元格)
         indexPathRow = Int(myCollectionView.contentOffset.x / myCollectionView.bounds.width)
@@ -121,6 +140,33 @@ extension JYCarouselView: UIScrollViewDelegate {
         // 当前图片索引
         let pictureIndex = indexPathRow % pictureDataSource.count
         myPageView.currentPage = pictureIndex
+        
+        // 开启计时器
+        startTimer()
+    }
+}
+
+// MARK: - 计时器逻辑
+extension JYCarouselView {
+    /// 开启计时器
+    fileprivate func startTimer() {
+        destroyTimer()
+        
+        myTimer = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(startScroll), userInfo: nil, repeats: true)
+    }
+    
+    /// 销毁计时器
+    fileprivate func destroyTimer() {
+        if myTimer != nil {
+            myTimer!.invalidate()
+            myTimer = nil
+        }
+    }
+    
+    /// 计时器调用方法：开始滚动
+    @objc fileprivate func startScroll() {
+        myCollectionView.scrollToItem(at: IndexPath(item: indexPathRow + 1, section: 0), at: UICollectionViewScrollPosition.centeredHorizontally, animated: true)
+        scrollViewDidEndDecelerating(myCollectionView)
     }
 }
 
