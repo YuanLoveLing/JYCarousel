@@ -61,7 +61,8 @@ class JYCarouselView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        myCollectionViewFlowLayout.itemSize = myCollectionView.frame.size
+        myCollectionViewFlowLayout.itemSize.width = bounds.width
+        myCollectionViewFlowLayout.itemSize.height = bounds.height
         myCollectionViewFlowLayout.minimumLineSpacing = 0.0
         myCollectionViewFlowLayout.minimumInteritemSpacing = 0.0
         
@@ -79,7 +80,7 @@ class JYCarouselView: UIView {
     
     
     deinit {
-        // 解决当timer释放后 回调scrollViewDidScroll时访问野指针导致崩溃
+        // 解决当timer释放后 回调UIScrollViewDelegate时访问野指针导致崩溃
         myCollectionView.delegate = nil
         myCollectionView.dataSource = nil
         print("\(#file)88")
@@ -137,14 +138,14 @@ extension JYCarouselView: UIScrollViewDelegate {
             myCollectionView.scrollToItem(at: IndexPath(item: indexPathRow, section: 0), at: UICollectionViewScrollPosition.centeredHorizontally, animated: false)
         }
         
-        // 当前图片索引
-        let pictureIndex = indexPathRow % pictureDataSource.count
-        myPageView.currentPage = pictureIndex
+        // myPageView索引
+        myPageView.currentPage = indexPathRow % pictureDataSource.count
         
         // 开启计时器
         startTimer()
     }
 }
+
 
 // MARK: - 计时器逻辑
 extension JYCarouselView {
