@@ -9,13 +9,13 @@
 import UIKit
 
 class localCarouselViewController: UIViewController {
-
+    
     fileprivate var carousalView: JYCarouselView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // 这句话很重要，如果不设置automaticallyAdjustsScrollViewInsets为false的话，UICollectionView内部流水布局会有问题
+
+        // 如果当前控制器有导航，应该设置automaticallyAdjustsScrollViewInsets为false否则UICollectonView的layout会有问题
         automaticallyAdjustsScrollViewInsets = false
         
         view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
@@ -31,7 +31,7 @@ class localCarouselViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
-        carousalView?.frame = CGRect(x: 0, y: 20, width: view.bounds.width, height: 300)
+        carousalView?.frame = CGRect(x: 20, y: 100, width: view.bounds.width - 40, height: view.bounds.height - 200)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBAction func localCarouselButtonDidClick(_ sender: Any) {
         let vc = localCarouselViewController()
         navigationController?.pushViewController(vc, animated: true)
+//        present(vc, animated: true, completion: nil)
     }
     
     /// 在线图片轮播

@@ -56,19 +56,30 @@ class JYCarouselView: UIView {
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
         myCollectionView.register(UINib(nibName: "JYCarouselViewCell", bundle: nil), forCellWithReuseIdentifier: JYCarouselViewCellId)
+        
+        // 添加通知
+        addNotification()
+    }
+    
+    /// 设置UICollectionView的layout
+    @objc fileprivate func setCollectionViewLayout() {
+        myCollectionViewFlowLayout.invalidateLayout()
+        
+        myCollectionViewFlowLayout.minimumLineSpacing = 0.0
+        myCollectionViewFlowLayout.minimumInteritemSpacing = 0.0
+        myCollectionViewFlowLayout.itemSize = myCollectionView.bounds.size
+        
+        myCollectionViewFlowLayout.prepare()
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        myCollectionViewFlowLayout.itemSize.width = bounds.width
-        myCollectionViewFlowLayout.itemSize.height = bounds.height
-        myCollectionViewFlowLayout.minimumLineSpacing = 0.0
-        myCollectionViewFlowLayout.minimumInteritemSpacing = 0.0
+        // 设置UICollectionView的layout
+        setCollectionViewLayout()
         
         // 解决屏幕旋转后分页问题
-        let offsetX = myCollectionView.bounds.width * CGFloat(indexPathRow)
-        myCollectionView.contentOffset = CGPoint(x: offsetX, y: 0)
+        myCollectionView.scrollToItem(at: IndexPath(item: indexPathRow, section: 0), at: .centeredHorizontally, animated: false)
     }
     
     override func removeFromSuperview() {
@@ -78,12 +89,29 @@ class JYCarouselView: UIView {
         destroyTimer()
     }
     
-    
     deinit {
         // 解决当timer释放后 回调UIScrollViewDelegate时访问野指针导致崩溃
         myCollectionView.delegate = nil
         myCollectionView.dataSource = nil
+        
+        NotificationCenter.default.removeObserver(self)
         print("\(#file)88")
+    }
+}
+
+
+// MARK: - 通知逻辑
+extension JYCarouselView {
+    /// 添加通知
+    fileprivate func addNotification() {
+        // 监听：屏幕旋转
+        NotificationCenter.default.addObserver(self, selector: #selector(screenDidRotate), name: NSNotification.Name.UIApplicationDidChangeStatusBarOrientation, object: nil)
+    }
+    
+    /// 屏幕旋转
+    @objc fileprivate func screenDidRotate() {
+        // 设置UICollectionView的layout
+        setCollectionViewLayout()
     }
 }
 
@@ -137,11 +165,11 @@ extension JYCarouselView: UIScrollViewDelegate {
         
         if indexPathRow == 0 {// 滚到第一个单元格
             indexPathRow = pictureDataSource.count
-            myCollectionView.scrollToItem(at: IndexPath(item: indexPathRow, section: 0), at: UICollectionViewScrollPosition.centeredHorizontally, animated: false)
+            myCollectionView.scrollToItem(at: IndexPath(item: indexPathRow, section: 0), at: .centeredHorizontally, animated: false)
             
         }else if indexPathRow == (pictureDataSource.count * 2 - 1) {// 滚到最后一个单元格
             indexPathRow = pictureDataSource.count - 1
-            myCollectionView.scrollToItem(at: IndexPath(item: indexPathRow, section: 0), at: UICollectionViewScrollPosition.centeredHorizontally, animated: false)
+            myCollectionView.scrollToItem(at: IndexPath(item: indexPathRow, section: 0), at: .centeredHorizontally, animated: false)
         }
         
         // 开启计时器
@@ -169,7 +197,7 @@ extension JYCarouselView {
     
     /// 计时器调用方法：自动滚动
     @objc fileprivate func automaticScroll() {
-        myCollectionView.scrollToItem(at: IndexPath(item: indexPathRow + 1, section: 0), at: UICollectionViewScrollPosition.centeredHorizontally, animated: true)
+        myCollectionView.scrollToItem(at: IndexPath(item: indexPathRow + 1, section: 0), at: .centeredHorizontally, animated: true)
         scrollViewDidEndDecelerating(myCollectionView)
     }
 }
