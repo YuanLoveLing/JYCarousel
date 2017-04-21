@@ -14,24 +14,23 @@ class onlineCarouselViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        automaticallyAdjustsScrollViewInsets = false
         
         view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
+        /******************** 基本用法 ********************/
         carousalView = JYCarouselView.carouselView(pictureDataSource: pictureDataSource, clickCellClosure: { (index) in
             print("点击了第\(index)张图片")
         })
         carousalView?.myPageView.currentPageIndicatorTintColor = #colorLiteral(red: 1, green: 0.4509803922, blue: 1, alpha: 1)
         carousalView?.myPageView.pageIndicatorTintColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)
         view.addSubview(carousalView!)
+        /******************** 基本用法 ********************/
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
-//        carousalView?.frame = CGRect(x: 20, y: 20, width: 200, height: 300)
-        carousalView?.frame = CGRect(x: 20, y: 100, width: view.bounds.width - 40, height: view.bounds.height - 200)
+        carousalView?.frame = CGRect(x: 20, y: 20, width: 200, height: 300)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -49,7 +48,7 @@ class onlineCarouselViewController: UIViewController {
     deinit {
         print("\(#file)88")
     }
-
+    
 }
 
 

@@ -14,18 +14,20 @@ class localCarouselViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // 如果当前控制器有导航，应该设置automaticallyAdjustsScrollViewInsets为false否则UICollectonView的layout会有问题
-        automaticallyAdjustsScrollViewInsets = false
         
         view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
+        // 如果当前控制器有导航，应该设置automaticallyAdjustsScrollViewInsets为false否则UICollectonView的layout会有问题
+        automaticallyAdjustsScrollViewInsets = false
+        
+        /******************** 基本用法 ********************/
         carousalView = JYCarouselView.carouselView(pictureDataSource: pictureDataSource, clickCellClosure: { (index) in
             print("点击了第\(index)张图片")
         })
         carousalView?.myPageView.currentPageIndicatorTintColor = #colorLiteral(red: 1, green: 0.4509803922, blue: 1, alpha: 1)
         carousalView?.myPageView.pageIndicatorTintColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)
         view.addSubview(carousalView!)
+        /******************** 基本用法 ********************/
     }
     
     override func viewWillLayoutSubviews() {
